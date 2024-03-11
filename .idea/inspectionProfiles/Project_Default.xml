@@ -1,0 +1,53 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="2">
+            <item index="0" class="java.lang.String" itemvalue="endif" />
+            <item index="1" class="java.lang.String" itemvalue="%}" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="JSUndeclaredVariable" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="20">
+            <item index="0" class="java.lang.String" itemvalue="flake8" />
+            <item index="1" class="java.lang.String" itemvalue="psycopg2" />
+            <item index="2" class="java.lang.String" itemvalue="Pillow" />
+            <item index="3" class="java.lang.String" itemvalue="Babel" />
+            <item index="4" class="java.lang.String" itemvalue="Django" />
+            <item index="5" class="java.lang.String" itemvalue="django-phonenumbers" />
+            <item index="6" class="java.lang.String" itemvalue="django-phonenumber-field" />
+            <item index="7" class="java.lang.String" itemvalue="djangorestframework" />
+            <item index="8" class="java.lang.String" itemvalue="flower" />
+            <item index="9" class="java.lang.String" itemvalue="dal" />
+            <item index="10" class="java.lang.String" itemvalue="django-imagekit" />
+            <item index="11" class="java.lang.String" itemvalue="celery" />
+            <item index="12" class="java.lang.String" itemvalue="django-money" />
+            <item index="13" class="java.lang.String" itemvalue="django-autocomplete-light" />
+            <item index="14" class="java.lang.String" itemvalue="djhacker" />
+            <item index="15" class="java.lang.String" itemvalue="django-redis" />
+            <item index="16" class="java.lang.String" itemvalue="django-colorfield" />
+            <item index="17" class="java.lang.String" itemvalue="django-rest-multiple-models" />
+            <item index="18" class="java.lang.String" itemvalue="django-nested-admin" />
+            <item index="19" class="java.lang.String" itemvalue="redis" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="app.recipe.tests.test_recipe_api.core" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
