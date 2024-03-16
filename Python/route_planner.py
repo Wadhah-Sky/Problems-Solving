@@ -62,10 +62,15 @@ class RoutePlanner:
           valid.
         """
 
+        # First check the given row and colum is valid coordination.
         if 0 <= row < len(self.matrix) and 0 <= column < len(self.matrix[0]):
+            # Check that the matrix that have been set to current instance is
+            # return True for given row and column while it hasn't visited
+            # given coordination.
             if self.matrix[row][column] and not self.visited[row][column]:
                 return True
 
+        # Otherwise return False.
         return False
 
     def find_path(self, row: int, column: int) -> bool:
@@ -80,14 +85,25 @@ class RoutePlanner:
           (bool): A boolean returns if there is a path to certain positions in
           the matrix.
         """
+        # Check current row and column is valid and within matrix coordination
         if not self.valid_move(row, column):
             return False
 
+        # This is the important condition where we return True because current
+        # parameter of row and column is same row and column of current route
+        # planer instance, which means we reach it successfully.
         if row == self.to_row and column == self.to_column:
             return True
 
+        # Set given row and column as visited in visited matrix.
         self.visited[row][column] = True
 
+        # Run recursive call for x-axis and y-axis in right , left, top and
+        # down.
+        # Note: Recursive will end the moment we get True which happen when
+        #       sending row value is equal self.to_row and column value is
+        #       equal to self.to_column, otherwise False because we visit all
+        #       nodes and we will get valid_move() with False value.
         return (self.find_path(row - 1, column) or
                 self.find_path(row, column - 1) or
                 self.find_path(row + 1, column) or
@@ -117,12 +133,17 @@ def route_exists(from_row: int, from_column: int, to_row: int, to_column: int,
     if type(matrix) != list:
         raise TypeError("The matrix must be a list!")
     try:
-        if not matrix[from_row][from_column] or not matrix[to_row][to_column]:
+        # Check that start point and end point is Not False
+        if (to_row > len(matrix) - 1) or \
+           (to_column > len(matrix[0]) - 1) or \
+           not matrix[from_row][from_column] or \
+           not matrix[to_row][to_column]:
             return False
     except IndexError:
         raise IndexError("The indexes must be valid indexes!")
 
     route_planner = RoutePlanner(matrix, to_row, to_column)
+
     return route_planner.find_path(from_row, from_column)
 
 
