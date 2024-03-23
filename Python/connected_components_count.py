@@ -35,7 +35,7 @@ def explore_dfs(graph, node, visited):
 
 
 def connected_components_count(graph, visited):
-    """Return the count of connected components in grap, Note that the
+    """Return the count of connected components in graph, Note that the
     unconnected node count as one and group of connected nodes count as one"""
 
     # Convert boolean adjacency list into dictionary.
